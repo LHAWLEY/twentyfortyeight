@@ -1,0 +1,45 @@
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  line-height: 100px;
+  font-size: 72px;
+  background-color: #aaa;
+  color: #eee;
+  border-radius: 10px;
+}
+
+.board{
+  background-color: #eee;
+  height: 400px;
+  width: 400px;
+}
+
+.empty{
+  background-color: #eee;
+}
+.new-tile{
+  animation-name: appear;
+  animation-duration: 0.2s;
+}
+.merged{
+  animation-name: merge;
+  animation-duration: 0.2s;
+}
+
+@keyframes appear {
+  from{transform: scale(0);}
+  to{transform: scale(1);}
+}
+
+@keyframes merge {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
