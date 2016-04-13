@@ -122,7 +122,7 @@ Board.prototype.move = function(direction){
     this.slideAll();
     this.placeTile();
     this.rotateTimes((ROTATIONS['total'] - numRotations) % 4);
-    
+
 
     if (this.over) {
       alert('Game over!')
