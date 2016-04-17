@@ -123,13 +123,23 @@ Board.prototype.move = function(direction){
     this.placeTile();
     this.rotateTimes((ROTATIONS['total'] - numRotations) % 4);
 
-
     if (this.over) {
       alert('Game over!')
+    } else {
+      this.checkForWin();
     }
   this.resetMerged();
   }
 };
+
+Board.prototype.checkForWin = function(){
+  for (var i = 0; i < this.tiles.length; i++) {
+    if (this.tiles[i].value === 2048) {
+      alert('You win!');
+      this.over = true;
+    }
+  }
+}
 
 Board.prototype.toJSON = function(){
   var board = [];
