@@ -8,13 +8,17 @@ html, body {
 }
 
 .title {
-  text-align: center;
+  color: #666;
+}
+
+.button {
   color: #666;
 }
 
 .container {
   width: 450px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .tile {
