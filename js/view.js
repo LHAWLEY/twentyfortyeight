@@ -12,7 +12,8 @@ View.prototype.template = function(){
         emptyClass = tile.value === 0 ? 'empty' : '',
         newClass = tile.isNew ? 'new-tile' : '',
         mergeClass = tile.hasMerged ? 'merged' : '',
-        allClasses = ['tile', emptyClass, newClass, mergeClass].join(' ');
+        colorClass = 'color-' + tileValue,
+        allClasses = ['tile', emptyClass, newClass, mergeClass, colorClass].join(' ');
 
     html += '<div class="' + allClasses + '">' + tileValue + '</div>';
   }

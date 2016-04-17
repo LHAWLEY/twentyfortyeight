@@ -176,4 +176,8 @@ describe("Board", function(){
                                  0, 0, 0, 0,
                                  0, 0, 0, 0]);
   });
+
+  // it("knows if there is a winner", function(){
+
+  // });
 });

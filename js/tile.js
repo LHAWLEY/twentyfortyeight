@@ -6,5 +6,4 @@ function Tile(value){
 
 Tile.prototype.toJSON = function() {
   return { value: this.value, hasMerged: this.hasMerged, isNew: this.isNew }
-};
-
+}
