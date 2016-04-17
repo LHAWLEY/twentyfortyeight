@@ -60,11 +60,11 @@ Board.prototype.slideAll = function(){
   }
 };
 
-Board.prototype.slide = function(i){
-  for (; !this.isAgainstWall(i); i--){
+Board.prototype.slide = function(index){
+  for (var i = index; !this.isAgainstWall(i); i--){
     if (this.isEmpty(i - 1)){
       this.swap(i);
-    } else if (this.tiles[i].value === this.tiles[i - 1].value && !this.tiles[i - 1].hasMerged){
+    } else if (this.tiles[i].value === this.tiles[i - 1].value && !this.tiles[i - 1].hasMerged && !this.tiles[i].hasMerged){
       this.merge(i);
     }
   }
@@ -115,18 +115,19 @@ Board.prototype.getDefaultBoard = function(){
 
 Board.prototype.move = function(direction){
   if (!this.over) {
-    this.reset();
     var numRotations = ROTATIONS[direction];
 
     this.rotateTimes(numRotations);
     this.slideAll();
+    this.resetNewTile();
     this.placeTile();
     this.rotateTimes((ROTATIONS['total'] - numRotations) % 4);
-    
+
 
     if (this.over) {
       alert('Game over!')
     }
+  this.resetMerged();
   }
 };
 
@@ -138,9 +139,14 @@ Board.prototype.toJSON = function(){
   return board;
 };
 
-Board.prototype.reset = function(){
+Board.prototype.resetMerged = function(){
   for (var i = 0; i < this.tiles.length; i++){
     this.tiles[i].hasMerged = false;
+  }
+};
+
+Board.prototype.resetNewTile = function(){
+  for (var i = 0; i < this.tiles.length; i++){
     this.tiles[i].isNew = false;
   }
 }

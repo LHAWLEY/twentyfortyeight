@@ -10,19 +10,19 @@
   text-align: center;
   line-height: 100px;
   font-size: 72px;
-  background-color: steelblue;
   color: #eee;
   border-radius: 10px;
+  background-color: rgba(238, 228, 218, 0.35);
 }
 
 .board{
-  background-color: #eee;
+  background-color: #bbada0;
   height: 400px;
   width: 400px;
 }
 
 .empty{
-  background-color: #eee;
+  background-color: rgba(238, 228, 218, 0.35);
 }
 .new-tile{
   animation-name: appear;
@@ -42,4 +42,27 @@
   0%   {transform: scale(1);}
   50%  {transform: scale(1.2);}
   100% {transform: scale(1);}
+}
+.color-2    { background-color: #eee4da; }
+.color-4    { background-color: #ede0c8; }
+.color-8    { background-color: #f2b179; }
+.color-16   { background-color: #f59563; }
+.color-32   { background-color: #f67c5f; }
+.color-64   { background-color: #f65e3b; }
+.color-128  { background-color: #edcf72; }
+.color-256  { background-color: #edcc61; }
+.color-512  { background-color: #edc850; }
+.color-1024 { background-color: #edc53f; }
+.color-2048 { background-color: #edc22e; }
+
+.color-8,
+.color-16,
+.color-32,
+.color-64,
+.color-128,
+.color-256,
+.color-512,
+.color-1024,
+.color-2048 {
+  color: #f9f6f2;
 }
