@@ -3,16 +3,28 @@ html, body {
   width:100%;
   padding: 0;
   margin: 0;
+  color: #666;
   background-color: #faf8ef;
   font-family: 'Montserrat', sans-serif;
 }
 
-.title {
+a,
+a:active,
+a:visited,
+a:hover {
+  display: block;
   color: #666;
+  margin-top: 20px;
+}
+
+.title {
+  padding: 20px 0;
+  margin: 0;
 }
 
 .button {
-  color: #666;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .container {
@@ -28,7 +40,6 @@ html, body {
   text-align: center;
   line-height: 100px;
   font-size: 32px;
-  color: #666;
   border-radius: 10px;
   background-color: rgba(238, 228, 218, 0.35);
   margin: 5px;

@@ -1,14 +1,1 @@
-# 256! A 2048 Clone.
-
-## Learning Competencies
-
-* Build a JavaScript interface independent of a backend.
-* Build a complex JS model independent of the interface.
-* Integrate the JS model with the HTML interface.
-* Use the Mousetrap.js library to bind keyboard events.
-
-## Summary
-
-Let's build a clone of the game [2048](http://gabrielecirulli.github.io/2048/).
-
-We will implement the core game play. Play the game for a few minutes so you understand the rules of the game. How do blocks spawn? When does the game disallow a movement? How do blocks merge? How do blocks slide? Try to write a specification of how the game mechanics work.
+My implementation of the popular block-sliding game made with JavaScript, JQuery, CSS, and HTML.  Model logic tested with Jasmine.
